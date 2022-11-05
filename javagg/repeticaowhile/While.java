@@ -19,7 +19,6 @@ public class While {
             System.out.println("Cambalhota: " + cambalhota);
             
             System.out.print("Você está ficando tonto, quer continuar? [s/n] ");
-
             String confirma = leia.next();
 
             if (confirma == "s"){
@@ -29,8 +28,8 @@ public class While {
                 }else if (confirma == "n"){
                     System.out.println("");
                     System.out.println("");
+                    cambalhota = 10;
                     System.out.println("Vá dormir. ");
-                    break;
                 } else{
                     System.out.println("");
                     System.out.println("");
