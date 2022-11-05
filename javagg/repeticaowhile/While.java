@@ -17,24 +17,27 @@ public class While {
             ++cambalhota;
             
             System.out.println("Cambalhota: " + cambalhota);
+        
+                System.out.print("Ficou tonto? Quer continuar? [s/n] ");
+                String confirma = leia.next();
             
-            System.out.print("Você está ficando tonto, quer continuar? [s/n] ");
-            String confirma = leia.next();
-
-            if (confirma == "s"){
+                if(confirma.equals("s")){
+                    
                 System.out.println("");
                 System.out.println("Você se garante nos paranauê. ");
                 System.out.println("");
-                }else if (confirma == "n"){
+                }else if (confirma.equals("n")){
                     System.out.println("");
                     System.out.println("");
-                    cambalhota = 10;
                     System.out.println("Vá dormir. ");
+                    break;
                 } else{
                     System.out.println("");
                     System.out.println("");
                     System.out.println("Eu falei [s/n] digite uma opção válida. ");
                     System.out.println("");
+                    cambalhota--;
+                    //A minha intenção aqui era criar um programa que além de contar a cambalhota, perguntar também se o usuário gostaria de continuar antes no if e no else if eu estava usando assim if (confirma == "s") e no else if (confirma == "n") mas tava dando errado então eu aprendi que para esses casos ao invés de utilizar o exemplo acima o correto é fazer isso: ex if (confirma.equals("s")) e else if(confirma.equals("n")) só assim o programa fez o que eu queria. Mas no meu else se eu digitasse qualquer tecla mesmo assim a contagem continuava, e para bloquear a contagem eu utilizei o decremento cambalhota--;
                 }
     }
     System.out.println("");
