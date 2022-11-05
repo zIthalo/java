@@ -1,11 +1,34 @@
 package javagg.repeticaowhile;
 
+import java.util.Scanner;
+
+
 public class DoWhile {
     public static void main(String[] args){
-        int cc = 0;
+        int n, s = 0;
+        String resposta;
+        Scanner leia =  new Scanner(System.in);
         do{
-            ++cc;
-            System.out.println("Cambalhota " + cc);
-        }while (cc < 10);
+            System.out.println("");
+            System.out.println("------------------");
+            System.out.println("  Somador boladão ");
+            System.out.println("------------------");
+            System.out.println("");
+            System.out.print("Digite um número: ");
+            n = leia.nextInt();
+            s += n;
+            System.out.print("Quer continuar? [s/n] ");
+            resposta = leia.next();
+        }while (resposta.equals("s"));
+
+        System.out.println("--------------------");
+        System.out.println("  Calculando . . .");
+        System.out.println("--------------------");
+        System.out.println("");   
+        System.out.println("A soma de todos os valores é " + s);
+        System.out.println("");
+        System.out.println("--------------------");
+        System.out.println("        FIM         ");
+        System.out.println("--------------------");
     }
 }
