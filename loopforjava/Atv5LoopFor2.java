@@ -1,5 +1,5 @@
 package loopforjava;
-//Faça um programa imprime a soma de x variando de 1 a 20.
+//Faça um programa imprima a soma de x variando de 1 a 20.
 
 public class Atv5LoopFor2 {
     public static void main(String[] args) {
