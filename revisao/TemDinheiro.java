@@ -8,9 +8,89 @@ import java.util.Scanner;
 public class TemDinheiro{
     public static void main(String[] args) {
         Scanner leia = new Scanner(System.in);
-        int carro = 1000;
-        float dinheiro = 0;
-        double
+        String nome;
+        int carro = 10000;
+        int moto = 7000;
+        String produto;
+        double dinheiro = 0;
+        int r1 = 0;
+        int r2 = 0;
+        double quant1 = 0;
+        double quant2 = 0;
+        System.out.println("");
+
+        System.out.print("Digite seu nome: ");
+        nome = leia.next();
+
+        System.out.println("Olá, " + nome + "!");
+        
+        System.out.print("Digite agora quanto você possui em dinheiro: R$");
+        dinheiro = leia.nextDouble();
+
+        System.out.println("Produtos disponíveis: ");
+        System.out.println("Carro = R$ 10000");
+        System.out.println("Moto = 7000");
+
+        System.out.println("Qual produto você quer comprar? ");
+        produto = leia.next();
+
+        if (produto.equals("Carro") || produto.equals(" carro") && dinheiro >= carro) {
+            System.out.println("Você escolheu um carro.");
+            for (int i = 0; carro <= dinheiro; i++) {
+                String resp;
+
+                System.out.println("Digite a quantidade de carros: ");
+                r1 = leia.nextInt();
+                quant1 = r1 * carro;
+                if (quant1 > dinheiro){
+                    System.out.println("Você não tem dinheiro suficiente para comprar " + r1 + " carros ");
+                }
+                System.out.println("Quer continuar? [s/n]");
+                resp = leia.next();
+                if (resp.equals("n")) {
+                    break;
+                }
+            }
+            if (r1 <= 1){
+                quant1-= dinheiro;
+                System.out.println("Parabéns, " + nome + "! Você comprou " + r1 + " carro. Seu saldo é de R$" + quant1+"." );
+                }else{
+                System.out.println("Parabéns, " + nome + "! Você comprou " + r1 + " carros. Seu saldo é de R$" + quant1+"." );             
+                }
+
+        } else if (produto.equals("Moto") || produto.equals("moto") && dinheiro >= moto){
+
+            System.out.println("Você escolheu uma moto");
+
+            for (r2 = 0; moto <= dinheiro; r2++) {
+                String resp;
+                System.out.println("Digite a quantidade de motos: ");
+                r2 = leia.nextInt();
+                quant2 = r2 * moto;
+                if (quant2 > dinheiro){
+                    System.out.println("Você não tem dinheiro suficiente para comprar " + r2 + " motos ");
+                }
+                System.out.println("Quer continuar? [s/n]");
+                resp = leia.next();
+                if (resp.equals("n")) {
+                    break;
+                }
+            }
+
+            quant2 -= dinheiro;
+
+            if (r2 <= 1){
+            System.out.println("Parabéns, " + nome + "! Você comprou " + r2 + " moto. Seu saldo é de R$" + quant2+"." );
+            }else{
+            System.out.println("Parabéns, " + nome + "! Você comprou " + r2 + " motos. Seu saldo é de R$" + quant2+".");             
+            }
+        }else if(dinheiro < carro || dinheiro < moto){
+            System.out.println("Você não tem dinheiro suficiente. . .");
+
+        }
+
+
+
 
     }
 
