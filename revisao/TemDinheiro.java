@@ -90,7 +90,7 @@ public class TemDinheiro{
         }
 
 
-
+        leia.close();
 
     }
 
